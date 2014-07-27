@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BlackJack game</title>
+    <link rel="stylesheet" href="app/css/page.css">
+    <link rel="stylesheet" href="http://selfthinker.github.io/CSS-Playing-Cards/cards.css">
+  </head>
+
+  <body class="playingCards loading">
+    <div id="dealer" class="deck">
+      <ul class="table"></ul>
+    </div>
+
+    <div id="player-controls" class="deck">
+      <ul class="table">
+        <li class="control hit">
+        <div class="card hit">
+          <span class="rank">&nbsp;<br>&nbsp;</span>
+          <span class="suit">hit</span>
+        </div>
+        </li>
+        <li class="control stay">
+        <div class="card stay">
+          <span class="rank">&nbsp;<br>&nbsp;</span>
+          <span class="suit">stay</span>
+        </div>
+      </li>
+      </ul>
+      <div class="score-board"></div>
+      <div><button id="reset">new game</button></div>
+    </div>
+
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/es5-shim/es5-sham.js"></script>
+    <script data-main="requireMain.js" src="bower_components/requirejs/require.js"></script>
+  </body>
+</html>

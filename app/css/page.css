@@ -1,0 +1,47 @@
+body {
+    font-family: verdana, arial, sans-serif;
+}
+
+body.loading * {
+    display: none;
+}
+
+button {
+    width: 200px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.deck {
+    clear: both;
+    height: 110px;
+}
+
+#player-controls {
+    margin-top: 60px;
+}
+
+
+.score-board {
+    clear: both;
+    padding: 10px;
+}
+
+.playingCards .card.hit  {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+.playingCards .card.stay  {
+    background-color: #d00000;
+    color: white;
+    cursor: pointer;
+}
+
+.playingCards li.control .card .suit {
+    text-align: center;
+}
+
+.playingCards .card.back .suit {
+    display: none;
+}
