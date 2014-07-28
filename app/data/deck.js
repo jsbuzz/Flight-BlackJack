@@ -32,6 +32,8 @@ function(defineComponent) {
         this.on("uiInitGame", initGame);
         this.on("playerRoundOver", playOff);
         this.on("dataGameOver", gameOver);
+
+        resetCards();
       });
     }
 
@@ -50,8 +52,6 @@ function(defineComponent) {
 
     function initGame() {
         setTimeout(function() { // do this asynchronously
-            resetCards();
-
             // two cards for the player
             serveCard.call(this, null, {for: 'player'});
             serveCard.call(this, null, {for: 'player'});
@@ -95,6 +95,9 @@ function(defineComponent) {
     }
 
     function pullCard() {
+        if(!cardSet.length) {
+            resetCards();
+        }
         var pos = Math.floor(Math.random()*cardSet.length),
             card = cardSet[pos];
 
