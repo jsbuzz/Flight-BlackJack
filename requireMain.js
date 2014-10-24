@@ -7,10 +7,9 @@ requirejs.config({
 
 require(
   [
-    'flight/lib/debug'
+    'bower_components/flight-monitor/flight-monitor'
   ],
-
-  function(debug) {
+  function() {
     require(['app/boot/page'], function(initialize) {
       initialize();
     });
